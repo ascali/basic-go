@@ -7,7 +7,7 @@ import (
 
 	"github.com/labstack/echo"
 
-	"echo/handler"
+	"warung/handler"
 )
 
 //valyala Define the template registry struct
