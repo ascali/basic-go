@@ -20,13 +20,6 @@ var data = []FoodMenu{
 	{"M02", "Rumbah Asem", 7000},
 }
 
-// type pelajar_struct struct {
-// 	id    int
-// 	name  string
-// 	age   int
-// 	class string
-// }
-
 type pelajar_struct struct {
 	Id    int    `json:"id"`
 	Name  string `json:"name"`
