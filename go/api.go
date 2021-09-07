@@ -28,10 +28,10 @@ var data = []FoodMenu{
 // }
 
 type pelajar_struct struct {
-	id    int    `json:"id"`
-	name  string `json:"name"`
-	age   int    `json:"age"`
-	class string `json:"class"`
+	Id    int    `json:"id"`
+	Name  string `json:"name"`
+	Age   int    `json:"age"`
+	Class string `json:"class"`
 }
 
 var pelajarData []pelajar_struct
@@ -138,7 +138,7 @@ func read_pelajar() {
 
 	for pelajar.Next() {
 		var each_pelajar pelajar_struct
-		var err = pelajar.Scan(&each_pelajar.id, &each_pelajar.name, &each_pelajar.age, &each_pelajar.class)
+		var err = pelajar.Scan(&each_pelajar.Id, &each_pelajar.Name, &each_pelajar.Age, &each_pelajar.Class)
 		if err != nil {
 			fmt.Println(err.Error())
 			return
