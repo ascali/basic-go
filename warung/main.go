@@ -41,6 +41,10 @@ func main() {
 	// Route => handler
 	e.GET("/", handler.HomeHandler)
 	e.GET("/about", handler.AboutHandler)
+	// api
+	e.GET("/read_menu", handler.GetDataMenu)
+	e.GET("/read_type_menu", handler.GetDataTypeMenu)
+
 	e.Static("/static", "assets")
 
 	// Start the Echo server

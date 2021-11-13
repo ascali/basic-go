@@ -3,6 +3,7 @@
 {{end}}
 
 {{define "body"}}
+  <div data-module='{{index . "module"}}'></div>
 
   <section class="bg-1 h-900x main-slider pos relative">
     <div class="triangle-up pos-bottom"></div>
@@ -165,17 +166,17 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <ul class="selecton brdr-b-primary mb-70">
-            <li><a href="#" class="active" data-select="*"><b>Semua Menu</b></a></li>
+          <ul class="selecton brdr-b-primary mb-70" id="id-food-menu">
+            <!-- <li><a href="#" class="active" data-select="*"><b>Semua Menu</b></a></li>
             <li><a href="#" data-select="Lengko"><b>Lengko</b></a></li>
             <li><a href="#" data-select="LaukPauk"><b>Lauk Pauk</b></a></li>
             <li><a href="#" data-select="Nasi"><b>Nasi</b></a></li>
-            <li><a href="#" data-select="Minuman"><b>Minuman</b></a></li>
+            <li><a href="#" data-select="Minuman"><b>Minuman</b></a></li> -->
           </ul>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 food-menu Lengko">
+      <div class="row" id="id-food-menu-data">
+        <!-- <div class="col-md-6 food-menu Lengko">
           <div class="sided-90x mv-30">
             <div class="s-left"><img src="/static/images/chickenloverz.png" alt="chickenloverz"></div>
             <div class="s-right">
@@ -214,7 +215,7 @@
               <a href="#" class="btn-brdr-primary plr-25"><b>Pesan</b></a>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
