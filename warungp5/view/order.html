@@ -1,0 +1,35 @@
+{{define "title"}}
+  Warung Pandawa 5 | {{index . "name"}}
+{{end}}
+
+{{define "body"}}
+<section class="story-area left-text center-sm-text">
+    <div class="container">
+        <div class="heading">
+            <img src="static/images/{{.Url_gambar}}" alt="" style="margin-top: 100px;height: 200px;width: 200px;">
+            <h2>{{.Nama_menu}}</h2>
+            <h5 class="mt-10 mb-30">Harga: Rp. {{.Harga}}</h5>
+            <h5 class="mt-10 mb-30">Silahkan Order Dengan Mengisi Data Dibawah Ini</h5>
+        </div>
+
+        <form action="/tambah_order" class="form-style-1 placeholder-1" method="POST">
+            <div class="row">
+                <input type="hidden" name="id_menu" id="" class="mb-20" value="{{.Id_menu}}">
+                <div class="col-md-4">
+                    <input type="text" name="nama_pemesan" class="mb-20" placeholder="Nama Pemesan" required>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" name="nomor_telepon" class="mb-20" placeholder="Nomor Telepon" required>
+                </div>
+                <div class="col-md-4">
+                    <input type="number" name="jumlah" class="mb-20" placeholder="Jumlan Pesanan" required>
+                </div>
+                <div class="col-md-12">
+                    <textarea name="alamat" id="" class="h-200x ptb-20" placeholder="Alamat Pengiriman" required></textarea>
+                </div>
+            </div>
+            <h6 class="center-text mtb-30"><button type="submit" class="btn-primaryc plr-25"><b>Pesan Sekarang</b></button></h6>
+        </form>
+    </div>
+</section>
+{{end}}
