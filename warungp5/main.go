@@ -35,6 +35,7 @@ func main() {
 	templates["home.html"] = template.Must(template.ParseFiles("view/home.html", "view/base.html"))
 	templates["about.html"] = template.Must(template.ParseFiles("view/about.html", "view/base.html"))
 	templates["order.html"] = template.Must(template.ParseFiles("view/order.html", "view/base.html"))
+	templates["admin_main.html"] = template.Must(template.ParseFiles("view/admin/admin_main.html", "view/admin/base.html"))
 	e.Renderer = &TemplateRegistry{
 		templates: templates,
 	}
@@ -44,6 +45,7 @@ func main() {
 	e.GET("/beranda", handler.HomeHandler)
 	e.GET("/about", handler.AboutHandler)
 	e.GET("/order", handler.OrderHandler)
+	e.GET("/admin", handler.AdminHandler)
 
 	e.GET("/baca_menu", handler.BacaData)
 	e.GET("/baca_menu_populer", handler.BacaDataPopuler)

@@ -12,7 +12,7 @@ func OrderHandler(c echo.Context) error {
 	r := c.Request()
 	return c.Render(http.StatusOK, "order.html", map[string]interface{}{
 		"name":       "Order",
-		"msg":        "Hello Saya Dari Niomic",
+		"msg":        "Warung Pandawa 5",
 		"Id_menu":    r.URL.Query()["Id_menu"][0],
 		"Nama_menu":  r.URL.Query()["Nama_menu"][0],
 		"Url_gambar": r.URL.Query()["Url_gambar"][0],

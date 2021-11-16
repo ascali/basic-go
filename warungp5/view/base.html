@@ -25,6 +25,7 @@
             <li><a href="/beranda#tentang">Tentang</a></li>
             <li><a href="/beranda#lihat-menu">Layanan</a></li>
             <li><a href="/beranda#kontak">Kontak</a></li>
+            <li><a href="javascript:void(0)" data-toggle="modal" data-target="#loginModal">Login</a></li>
           </ul>
           <div class="clearfix"></div>
         </div>
@@ -60,6 +61,76 @@
           </p>
       </footer>
       
+      <form action="" id="loginForm" class="form-style-1 placeholder-1" method="POST">
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="username" class="mb-20" placeholder="Username" required>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="password" name="password" class="mb-20" placeholder="Password" required>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#daftarModal">Daftar</button>
+                <button type="button" class="btn btn-primary">Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <form action="" id="daftarForm" class="form-style-1 placeholder-1" method="POST">
+        <div class="modal fade" id="daftarModal" tabindex="-1" role="dialog" aria-labelledby="daftarModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="daftarModalLabel">Daftar Member</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="username" class="mb-20" placeholder="Username" required>
+                    </div>
+                    <div class="col-md-12">
+                      <input type="password" name="password" class="mb-20" placeholder="Password" required>
+                    </div>
+                    <div class="col-md-12">
+                      <input type="text" name="nama_lengkap" class="mb-20" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="col-md-12">
+                      <input type="number" name="nomor_telepon" class="mb-20" placeholder="Nomor Telepon" required>
+                    </div>
+                    <div class="col-md-12">
+                      <input type="email" name="email" class="mb-20" placeholder="Email" required>
+                    </div>
+                    <div class="col-md-12">
+                      <textarea name="alamat" id="" class="h-200x ptb-20" placeholder="Alamat" required></textarea>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Login</button>
+                <button type="button" class="btn btn-primary">Daftar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
       <script src="static/plugin-frameworks/jquery-3.2.1.min.js"></script>
       <script src="static/plugin-frameworks/bootstrap.min.js"></script>
       <script src="static/plugin-frameworks/swiper.js"></script>

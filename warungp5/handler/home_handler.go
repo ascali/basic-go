@@ -30,7 +30,7 @@ func HomeHandler(c echo.Context) error {
 
 	return c.Render(http.StatusOK, "home.html", map[string]interface{}{
 		"name":         "HOME",
-		"msg":          "Echo",
+		"msg":          "Warung Pandawa 5",
 		"data":         datax,
 		"data_jenis":   dataj,
 		"data_populer": datap,
